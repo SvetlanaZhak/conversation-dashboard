@@ -25,6 +25,7 @@
     "react-localization": "^1.0.15",
     "react-scripts": "3.4.0",
     "react-table-v6": "^6.8.6",
+    "react-use-storage": "^0.4.1",
     "typescript": "~3.7.2"
   },
   "scripts": {

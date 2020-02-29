@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { useStyles } from "../hooks/styles";
@@ -7,6 +7,7 @@ import { translations, Language } from "../assets/translations";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faKey } from "@fortawesome/free-solid-svg-icons";
 import { GetData } from "../hooks/api";
+import { useLocalStorage } from "react-use-storage";
 
 interface Props {
   getData: GetData;
@@ -14,9 +15,9 @@ interface Props {
 }
 
 export function FetchForm(props: Props) {
-  const [startDate, setStartDate] = useState("2017-06-01");
-  const [endDate, setEndDate] = useState("2017-07-01");
-  const [token, setToken] = useState("");
+  const [startDate, setStartDate] = useLocalStorage("start-date", "2017-06-01");
+  const [endDate, setEndDate] = useLocalStorage("end-date", "2017-07-01");
+  const [token, setToken] = useLocalStorage("token", "");
 
   let strings = new LocalizedStrings({ translations });
   const { getData, lang } = props;

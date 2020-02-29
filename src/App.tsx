@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useLocalStorage } from "react-use-storage";
+import React from "react";
 import { useRoomStatistics } from "./hooks/api";
 import LanguageDropdown from "./components/LanguageDropdown";
 import { FetchForm } from "./components/FetchForm";
@@ -8,7 +9,7 @@ import { AppBar } from "@material-ui/core";
 import { Language } from "./assets/translations";
 
 export default function App() {
-  const [lang, setLang] = useState<Language>("en");
+  const [lang, setLang] = useLocalStorage<Language>("lang", "en");
   const [{ data, loading, error }, getData] = useRoomStatistics();
 
   return (
