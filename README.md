@@ -1,4 +1,4 @@
-# Conversation Dashaaord
+# Conversation Dashboard
 
 A convenience UI dashboard for cheking statistics on conversations fetched from `api.giosg.com/api/reporting`. The dashboard is build with React as an job application exercise.
 
