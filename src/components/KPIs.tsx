@@ -22,19 +22,25 @@ export function KPIs(props: CommonProps) {
       <Box border={1} p={10} m={5}>
         <div style={KPIStyle}>
           <h1>{data.total_conversation_count}</h1>{" "}
-          <p>{strings[lang].totalConversationCount}</p>
+          <p style={{ textAlign: "center" }}>
+            {strings[lang].totalConversationCount}
+          </p>
         </div>
       </Box>
       <Box border={1} p={10} m={5}>
         <div style={KPIStyle}>
           <h1>{data.total_user_message_count}</h1>{" "}
-          <p>{strings[lang].totalUserMessageCount}</p>
+          <p style={{ textAlign: "center" }}>
+            {strings[lang].totalUserMessageCount}
+          </p>
         </div>
       </Box>
       <Box border={1} p={10} m={5}>
         <div style={KPIStyle}>
           <h1>{data.total_visitor_message_count}</h1>{" "}
-          <p>{strings[lang].totalVisitorMessageCount}</p>
+          <p style={{ textAlign: "center" }}>
+            {strings[lang].totalVisitorMessageCount}
+          </p>
         </div>
       </Box>
     </div>
